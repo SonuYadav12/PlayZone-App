@@ -45,4 +45,9 @@
     </string>
     <string name="play_zone">Play-Zone</string>
     <string name="all_your_childhood_games_n_in_one_place">All your Childhood Games\n In one Place</string>
+    <string name="signup">SignUp</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="todo">TODO</string>
 </resources>
