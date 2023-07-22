@@ -26,6 +26,7 @@ class Login : AppCompatActivity() {
         setContentView(binding.root)
 
         val gso=GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
+
         googleSignInClient=GoogleSignIn.getClient(this,gso)
 
         auth=Firebase.auth
@@ -79,5 +80,12 @@ private val launcher=registerForActivityResult(ActivityResultContracts.StartActi
           }
       }
 }
-
+//This will take the existting user to the manin page if the user have already created and account
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser!=null)
+        {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+    }
 }
